@@ -1,0 +1,70 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/* Header */
+
+.header{
+    background-color: aqua;
+}
+.header ul {
+    text-align: center;
+}
+.header ul li{
+    display: inline-block;
+    margin-left: -4px;
+}
+.header ul li:first-child a{
+    border-left: 1px solid white;
+}
+.header ul li a{
+    font:25px italic;
+    border-right: 1px solid white;
+    padding: 10px 10px;
+    display:inline-block;
+    text-decoration: none;
+    transition: .6s;
+}
+.header ul li:hover > a{
+    background-color: cadetblue;
+    
+}
+
+/* DropDown */
+
+.header ul li{
+    position: relative;
+    
+}
+.header ul li ul{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 200px;
+    background-color: aqua;
+    border-top: 1px solid white;
+    transition: .6s;
+}
+.header ul li ul li {
+    display: block;
+    margin-left: 0px;
+    border-bottom: 1px solid white;
+} 
+.header ul li ul li a{
+    display: block;
+}
+
+/* Hover */
+
+.header ul li ul{
+    visibility: hidden;
+    opacity:0;
+    transform:scale(0);
+    transform-origin: top center;
+}
+.header ul li:hover ul{
+    visibility: visible;
+    opacity:1;
+    transform:scale(1);
+}
